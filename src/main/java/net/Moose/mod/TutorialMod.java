@@ -1,8 +1,8 @@
 package net.Moose.mod;
 
 import com.mojang.logging.LogUtils;
+import net.Moose.mod.block.ModBlocks;
 import net.Moose.mod.item.ModsItems;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -54,6 +54,7 @@ public class TutorialMod {
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.NOMINURITE_BLOCK);
+            event.accept((ModBlocks.RAW_NOMINURITE_BLOCK));
         }
 
     }

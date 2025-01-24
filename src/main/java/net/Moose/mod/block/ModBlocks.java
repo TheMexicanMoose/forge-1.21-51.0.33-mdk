@@ -1,5 +1,6 @@
-package net.Moose.mod;
+package net.Moose.mod.block;
 
+import net.Moose.mod.TutorialMod;
 import net.Moose.mod.item.ModsItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -15,12 +16,16 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS,TutorialMod.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.BLOCKS, TutorialMod.MOD_ID);
 
 
     public static final RegistryObject<Block> NOMINURITE_BLOCK = registerBlock("nominurite_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
+    public static final RegistryObject<Block> RAW_NOMINURITE_BLOCK = registerBlock("raw_nominurite_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3f).requiresCorrectToolForDrops()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
