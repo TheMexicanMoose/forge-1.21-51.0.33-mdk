@@ -1,4 +1,6 @@
 {
   "item.moosestutorialmod.nominurite": "Nominurite Gem",
-  "item.moosestutorialmod.raw_nominurite": "Raw Nominurite"
+  "item.moosestutorialmod.raw_nominurite": "Raw Nominurite",
+
+  "block.moosestutorialmod.nominurite_block": "Block of Nominurite"
 }

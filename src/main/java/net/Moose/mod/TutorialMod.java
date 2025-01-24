@@ -33,6 +33,7 @@ public class TutorialMod {
         MinecraftForge.EVENT_BUS.register(this);
 
         ModsItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
         // Register the item to a creative tab
@@ -50,6 +51,9 @@ public class TutorialMod {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModsItems.NOMINURITE);
             event.accept(ModsItems.RAW_NOMINURITE);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.NOMINURITE_BLOCK);
         }
 
     }
