@@ -30,7 +30,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.moosestutorialmod.nominurite_blocks"))
                     .displayItems((itemDisplayParameters,output) -> {
                         output.accept(ModBlocks.NOMINURITE_BLOCK.get());
-                        output.accept(ModBlocks.RAW_NOMINURITE_BLOCK.get());
+                        output.accept(ModBlocks.NOMINURITE_ORE.get());
                     }).build());
 
     public static void register(IEventBus eventBus){

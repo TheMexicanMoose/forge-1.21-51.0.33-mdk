@@ -2,9 +2,11 @@ package net.Moose.mod.block;
 
 import net.Moose.mod.TutorialMod;
 import net.Moose.mod.item.ModsItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,9 +25,13 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
 
-    public static final RegistryObject<Block> RAW_NOMINURITE_BLOCK = registerBlock("raw_nominurite_block",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> NOMINURITE_ORE = registerBlock("nominurite_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> NOMINURITE_DEEPSLATE_ORE = registerBlock("nominurite_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3,6), BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
