@@ -31,6 +31,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters,output) -> {
                         output.accept(ModBlocks.NOMINURITE_BLOCK.get());
                         output.accept(ModBlocks.NOMINURITE_ORE.get());
+                        output.accept(ModBlocks.NOMINURITE_DEEPSLATE_ORE.get());
                     }).build());
 
     public static void register(IEventBus eventBus){
