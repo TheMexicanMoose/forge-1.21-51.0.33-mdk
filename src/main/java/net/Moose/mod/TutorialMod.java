@@ -2,6 +2,7 @@ package net.Moose.mod;
 
 import com.mojang.logging.LogUtils;
 import net.Moose.mod.block.ModBlocks;
+import net.Moose.mod.item.ModCreativeModeTabs;
 import net.Moose.mod.item.ModsItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -32,6 +33,9 @@ public class TutorialMod {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+
+        ModCreativeModeTabs.register((modEventBus));
+
         ModsItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
@@ -48,14 +52,6 @@ public class TutorialMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModsItems.NOMINURITE);
-            event.accept(ModsItems.RAW_NOMINURITE);
-        }
-        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
-            event.accept(ModBlocks.NOMINURITE_BLOCK);
-            event.accept((ModBlocks.RAW_NOMINURITE_BLOCK));
-        }
 
     }
 

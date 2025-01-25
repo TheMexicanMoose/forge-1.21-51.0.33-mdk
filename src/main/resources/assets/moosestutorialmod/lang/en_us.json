@@ -3,5 +3,8 @@
   "item.moosestutorialmod.raw_nominurite": "Raw Nominurite",
 
   "block.moosestutorialmod.nominurite_block": "Block of Nominurite",
-  "block.moosestutorialmod.raw_nominurite_block": "Block of Raw Nominurite"
+  "block.moosestutorialmod.raw_nominurite_block": "Block of Raw Nominurite",
+
+  "creativetab.moosestutorialmod.nominurite_items": "Nominurite Items",
+  "creativetab.moosestutorialmod.nominurite_blocks": "Nominurite Blocks"
 }
